@@ -1,0 +1,24 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-CJEjLPxk.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/images/img1.webp": {
+    "file": "assets/img1-BJnFBlId.webp",
+    "src": "resources/images/img1.webp"
+  },
+  "resources/images/img2.webp": {
+    "file": "assets/img2-bbjIh4vz.webp",
+    "src": "resources/images/img2.webp"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CDz8lOfN.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
