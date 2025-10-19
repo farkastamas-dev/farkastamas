@@ -1,11 +1,76 @@
-@import 'tailwindcss';
-
+@import "tailwindcss";
+@import "../../node_modules/lenis/dist/lenis.css";
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: "Plus Jakarta Sans", "Instrument Sans", ui-sans-serif,
+        system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+    --font-base: 18px;
+    --heading-font-weight: 600;
+    --heading-font-style: normal;
+    --heading-text-transform: none;
+}
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+body.menu-open {
+    overflow: hidden;
+}
+
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+    overflow: clip;
+}
+
+.lenis [data-lenis-prevent],
+.lenis [data-lenis-prevent-wheel],
+.lenis [data-lenis-prevent-touch] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+.lenis.lenis-autoToggle {
+    transition-property: overflow;
+    transition-duration: 1ms;
+    transition-behavior: allow-discrete;
+}
+.scroll-smooth {
+    scroll-behavior: smooth;
+}
+.heading,
+.h0,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.prose :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight);
+    font-style: var(--heading-font-style);
+    text-transform: var(--heading-text-transform);
+    overflow-wrap: normal;
+    line-height: 120%;
+}
+h1 {
+    @apply text-4xl;
+}
+h2 {
+    @apply text-2xl;
+}
+.xl\:text-xl {
+    font-size: 1.563rem;
+}
+.md\:text-xl {
+    font-size: 1.35rem;
 }
